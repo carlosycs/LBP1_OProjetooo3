@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+</head>
+<body>
+    <h1>
+        <p><center>--- Adega da Isabel ---</center></p>
+        {% for vinhos in vinhos %}
+        <p> Meu vinho favorito é o {{vinhos.vinho}}! ele tem um gosto {{vinhos.gosto}} e é {{vinhos.nacionalidade}}</p>
+        {% endfor %}
+    </h1>
+</body>
+</html>
